@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <title>Login</title>
+</head>
+
+<body>
+  <div class="login-container">
+    <img src="{% static 'img/Univesp_logo_jpg_rgb.jpg' %}" alt="Logo de login da univesp" srcset="">
+    <h2>Login - Gerenciamento de medicamentos</h2>
+    <form action="{% url 'home' %}" method="post">
+      {% csrf_token %}
+      <label>Email</label>
+      <input type="email" class="login-container__input" name="email" required />
+      <label>Senha</label>
+      <input type="password" class="login-container__input" name="password" required/>
+      <button class="login-container__button" type="submit">Entrar</button>
+    </form>
+  </div>
+
+  <!-- <script type="module" src="..\controller\LoginController.js"></script> <script>
+    const form = document.querySelector('form');
+    form.addEventListener('submit', (event) => {
+      event.preventDefault(); // Prevent default form submission
+     
+      const email = document.querySelector('.login-container__input[type="email"]').value;
+      const password = document.querySelector('.login-container__input[type="password"]').value;
+     
+      // Assuming you have a LoginController instance
+      if (LoginController.login(email, password)) {
+        window.location.href = "/views/home.html"; // Redirect to home page on success
+      } else {
+        alert("Login nao encontrado")
+      }
+    });
+  </script> -->
+</body>
+
+</html>

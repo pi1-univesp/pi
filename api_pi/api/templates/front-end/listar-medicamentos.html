@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+    <title>Home</title>
+
+<body>
+    <header class="menu_container">
+        <nav class="menu_container__nav ">
+            <ul class="menu_container__ul">
+                <li class="menu_container__nav__li">
+                    <a href="{% url 'listar_medicamentos' %}" class="menu_container__nav__a ">Lista de medicamentos</a>
+                </li>
+                <li class="menu_container__nav__li"><a href="{% url 'cadastro_de_medicamentos' %}"
+                        class="menu_container__nav__a ">Cadastro de medicamentos</a>
+                </li>
+                <li class="menu_container__nav__li"><a href="{% url 'cadastro_de_novos_usuarios' %}"
+                        class="menu_container__nav__a ">Cadastro de novos usuários</a>
+                </li>
+                <li class="menu_container__nav__li"><a href="{% url 'sair' %}" class="menu_container__nav__a ">Sair</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <img src="{% static 'img/Univesp_logo_jpg_rgb.jpg' %}" alt="Logo de login da univesp" srcset="">
+
+        <style>
+            table {
+                font-family: arial, sans-serif;
+                border-collapse: collapse;
+                width: 60%;
+            }
+
+            td,
+            th {
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px;
+            }
+
+            tr:nth-child(even) {
+                background-color: #dddddd;
+            }
+        </style>
+
+        <table>
+            <tr>
+                <th>Medicamento</th>
+                <th>Dosagem</th>
+                <th>Quantidade disponível</th>
+            </tr>
+            <tr>
+                <td>Dipirona</td>
+                <td>500 mg</td>
+                <td>100 comp</td>
+            </tr>
+            <tr>
+                <td>Paracetamol</td>
+                <td>750 mg</td>
+                <td>500 comp</td>
+            </tr>
+            <tr>
+                <td>Ibuprofeno</td>
+                <td>300 mg</td>
+                <td>150 comp</td>
+            </tr>
+            <tr>
+                <td>Nimesulida</td>
+                <td>100 mg</td>
+                <td>200 comp</td>
+            </tr>
+            <tr>
+                <td>Prednisona</td>
+                <td>20 mg</td>
+                <td>600 comp</td>
+            </tr>
+            <tr>
+                <td>Loratadina</td>
+                <td>10 mg</td>
+                <td>300 comp</td>
+            </tr>
+        </table>
+    </main>
+
+</html>
